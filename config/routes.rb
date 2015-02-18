@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'site/about'
+
   resources :profiles
 
   get 'site/home'

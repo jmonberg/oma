@@ -1,12 +1,38 @@
-<div class = "container"
+<div class="jumbotron">
+	<div class="container">
+		<h1>Welcome!</h1>
+		<p>This website is your place to learn and share about the life of Michigan Avenue, a commercial corridor that runs through Lansing and East Lansing, Michigan.</p>
+	</div>
+</div>
 
-  	<p "welcome">Welcome!</p>
-  	<p>This website is your place to learn and share about the life of Michigan Avenue, a commercial corridor that runs through Lansing and East Lansing, Michigan.</p> 
 
-<h1>Welcome to the Corridor!</h1>
 
-<p>This website is your place to learn and share about the life of Michigan Avenue, a
-commercial corridor that runs through Lansing and East Lansing, Michigan.  It's sponsored
-by the Michigan Avenue Corridor Improvement Authority and Michigan State University.</p>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h3>This website is your place to learn and share about the life of Michigan Avenue, a commercial corridor that runs through Lansing and East Lansing, Michigan.  It's sponsored by the Michigan Avenue Corridor Improvement Authority and Michigan State University.</h3>
+			<hr>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-4">
+			<h2> <%= link_to "Profiles", profiles_path %></h2>
+			<p>Share your stories of Michigan Avenue: the places and people 
+              that turn a street into a community</p>
+		</div>
+		<div class="col-md-4">
+			<h2> <%= link_to "About", site_about_path %> </h2>
+			<p>Learn about proposed changes to the corridor and the New 
+              Urbanism principles behind them, and suggest your own ideas.</p>
+		</div>
+		<div class="col-md-4">
+			<h2>Share them</h2>
+			<p>Share with your friends on facebook</p>
+		</div>
+	</div>
+
+
+
 
 </div>
