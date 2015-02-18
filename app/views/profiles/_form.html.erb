@@ -1,0 +1,21 @@
+<%= simple_form_for(@profile, html: {class: 'form-horizontal' }) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.input :body %>
+    <%= f.input :created_at %>
+    <%= f.input :updated_at %>
+    <%= f.input :url %>
+    <%= f.input :location %>
+    <%= f.input :username %>
+    <%= f.input :user_id %>
+    <%= f.input :image_url %>
+    <%= f.input :suspended_at %>
+    <%= f.input :suspension_status %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

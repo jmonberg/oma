@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :profiles
+
   get 'site/home'
 
   # The priority is based upon order of creation: first created -> highest priority.
