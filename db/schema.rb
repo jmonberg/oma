@@ -11,7 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150218145300) do
+ActiveRecord::Schema.define(version: 20150326003649) do
+
+  create_table "policy_ideas", force: true do |t|
+    t.string   "category"
+    t.string   "title"
+    t.string   "author"
+    t.text     "body"
+    t.string   "imglink1"
+    t.string   "imglink2"
+    t.string   "caption1"
+    t.string   "caption2"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+    t.integer  "votes_count"
+    t.datetime "suspended_at"
+    t.string   "suspension_status"
+  end
+
+  add_index "policy_ideas", ["user_id"], name: "index_policy_ideas_on_user_id"
 
   create_table "profiles", force: true do |t|
     t.string   "title"
@@ -25,6 +44,17 @@ ActiveRecord::Schema.define(version: 20150218145300) do
     t.string   "image_url"
     t.datetime "suspended_at"
     t.string   "suspension_status"
+  end
+
+  add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"
+
+  create_table "users", force: true do |t|
+    t.text     "logon"
+    t.text     "email"
+    t.text     "profile"
+    t.text     "display_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
