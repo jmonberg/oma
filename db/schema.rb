@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150327020825) do
+ActiveRecord::Schema.define(version: 20150327022103) do
 
   create_table "policy_categories", force: true do |t|
     t.string   "policy_category"
@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 20150327020825) do
   end
 
   create_table "policy_ideas", force: true do |t|
-    t.string   "category"
     t.string   "title"
     t.string   "author"
     t.text     "body"
