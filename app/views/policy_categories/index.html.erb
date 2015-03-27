@@ -1,0 +1,23 @@
+<h1>Listing policy_categories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @policy_categories.each do |policy_category| %>
+      <tr>
+        <td><%= link_to 'Show', policy_category %></td>
+        <td><%= link_to 'Edit', edit_policy_category_path(policy_category) %></td>
+        <td><%= link_to 'Destroy', policy_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Policy category', new_policy_category_path %>
