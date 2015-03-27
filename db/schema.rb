@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150327140524) do
+ActiveRecord::Schema.define(version: 20150327144253) do
 
   create_table "policy_categories", force: true do |t|
     t.string   "policy_category"
@@ -46,7 +46,6 @@ ActiveRecord::Schema.define(version: 20150327140524) do
     t.datetime "updated_at"
     t.string   "url"
     t.string   "location"
-    t.string   "username"
     t.integer  "user_id"
     t.string   "image_url"
     t.datetime "suspended_at"
