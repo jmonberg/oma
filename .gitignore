@@ -17,6 +17,8 @@
 
 db/import/zz articles_data_dump (policy_ideas, no apostrophes, NULLs).sql
 
+.DS_Store
+
 vendor/.DS_Store
 
 vendor/assets/.DS_Store
