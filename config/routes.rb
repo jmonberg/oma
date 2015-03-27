@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :policy_categories
+
   get 'site/about'
 
   resources :profiles
