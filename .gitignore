@@ -14,3 +14,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+db/import/zz articles_data_dump (policy_ideas, no apostrophes, NULLs).sql
+
+vendor/.DS_Store
+
+vendor/assets/.DS_Store
