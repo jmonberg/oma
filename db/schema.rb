@@ -11,16 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150327144253) do
+ActiveRecord::Schema.define(version: 20150713193808) do
 
-  create_table "policy_categories", force: true do |t|
-    t.string   "policy_category"
+  create_table "categories", force: true do |t|
+    t.string   "category_description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "active_category"
   end
 
-  create_table "policy_ideas", force: true do |t|
+  create_table "ideas", force: true do |t|
     t.string   "title"
     t.text     "body"
     t.string   "imglink1"
@@ -33,11 +33,11 @@ ActiveRecord::Schema.define(version: 20150327144253) do
     t.integer  "votes_count"
     t.datetime "suspended_at"
     t.string   "suspension_status"
-    t.integer  "policy_category_id"
+    t.integer  "category_id"
   end
 
-  add_index "policy_ideas", ["policy_category_id"], name: "index_policy_ideas_on_policy_category_id"
-  add_index "policy_ideas", ["user_id"], name: "index_policy_ideas_on_user_id"
+  add_index "ideas", ["category_id"], name: "index_ideas_on_category_id"
+  add_index "ideas", ["user_id"], name: "index_ideas_on_user_id"
 
   create_table "profiles", force: true do |t|
     t.string   "title"

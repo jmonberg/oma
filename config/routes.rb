@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :policy_categories
+  #resources :policy_categories
+  resources :categories
 
   get 'site/about'
 
