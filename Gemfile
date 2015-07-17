@@ -32,6 +32,9 @@ gem 'simple_form'
 # Pagination
 gem 'will_paginate'
 
+# Textilize
+gem 'textilize'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -21,7 +21,7 @@
     <% @profiles.each do |profile| %>
       <tr>
         <td><%= profile.title %></td>
-        <td><%= profile.body %></td>
+        <td><%= textilize profile.body %></td>
         <td><%= profile.location %></td>
         <td><%= profile.user.display_name %></td>
 
