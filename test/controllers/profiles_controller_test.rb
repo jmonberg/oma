@@ -18,7 +18,7 @@ class ProfilesControllerTest < ActionController::TestCase
 
   test "should create profile" do
     assert_difference('Profile.count') do
-      post :create, profile: { body: @profile.body, created_at: @profile.created_at, image_url: @profile.image_url, location: @profile.location, suspended_at: @profile.suspended_at, suspension_status: @profile.suspension_status, title: @profile.title, updated_at: @profile.updated_at, url: @profile.url, user_id: @profile.user_id, username: @profile.username }
+      post :create, profile: { body: @profile.body, created_at: @profile.created_at, image_url: @profile.image_url, location: @profile.location, suspended_at: @profile.suspended_at, suspension_status: @profile.suspension_status, title: @profile.title, updated_at: @profile.updated_at, url: @profile.url, user_id: @profile.user_id }
     end
 
     assert_redirected_to profile_path(assigns(:profile))
@@ -35,7 +35,7 @@ class ProfilesControllerTest < ActionController::TestCase
   end
 
   test "should update profile" do
-    patch :update, id: @profile, profile: { body: @profile.body, created_at: @profile.created_at, image_url: @profile.image_url, location: @profile.location, suspended_at: @profile.suspended_at, suspension_status: @profile.suspension_status, title: @profile.title, updated_at: @profile.updated_at, url: @profile.url, user_id: @profile.user_id, username: @profile.username }
+    patch :update, id: @profile, profile: { body: @profile.body, created_at: @profile.created_at, image_url: @profile.image_url, location: @profile.location, suspended_at: @profile.suspended_at, suspension_status: @profile.suspension_status, title: @profile.title, updated_at: @profile.updated_at, url: @profile.url, user_id: @profile.user_id }
     assert_redirected_to profile_path(assigns(:profile))
   end
 

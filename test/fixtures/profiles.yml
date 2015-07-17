@@ -7,7 +7,6 @@ one:
   updated_at: 2015-02-18 09:53:00
   url: MyString
   location: MyString
-  username: MyString
   user_id: 1
   image_url: MyString
   suspended_at: 2015-02-18 09:53:00
@@ -20,7 +19,6 @@ two:
   updated_at: 2015-02-18 09:53:00
   url: MyString
   location: MyString
-  username: MyString
   user_id: 1
   image_url: MyString
   suspended_at: 2015-02-18 09:53:00

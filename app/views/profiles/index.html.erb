@@ -23,8 +23,6 @@
         <td><%= profile.title %></td>
         <td><%= textilize profile.body %></td>
         <td><%= profile.location %></td>
-        <td><%= profile.user.display_name %></td>
-
         <td><%= link_to 'Show', profile %></td>
         <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
         <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
