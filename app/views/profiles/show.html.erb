@@ -1,57 +1,42 @@
-<div class = "container"
+<div class = "container">
 
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
+<div>
+<h1>
   <%= @profile.title %>
-</p>
+</h1>
+</div>
 
+<div>
 <p>
-  <strong>Body:</strong>
-  <%= textilize @profile.body %>
+   <%= textilize @profile.body %>
 </p>
+</div>
+<div>
+<% unless @profile.url == nil || "" %>
+    <p>Read more about this story at: <a href="<%= @profile.url %>"><%= profile.url %></p>
+  <% end %>
+</div>
 
-<p>
-  <strong>Created at:</strong>
-  <%= @profile.created_at %>
-</p>
-
-<p>
-  <strong>Updated at:</strong>
-  <%= @profile.updated_at %>
-</p>
-
-<p>
-  <strong>Url:</strong>
-  <%= @profile.url %>
-</p>
-
-<p>
+<div>
+ <p>
   <strong>Location:</strong>
   <%= @profile.location %>
-</p>
+ </p>
+</div>
+
+ <p>
+   <strong>User:</strong>
+    <%= @profile.user_id %>
+ </p>
 
 
-<p>
-  <strong>User:</strong>
-  <%= @profile.user_id %>
-</p>
-
-<p>
-  <strong>Image url:</strong>
-  <%= @profile.image_url %>
-</p>
-
-<p>
-  <strong>Suspended at:</strong>
-  <%= @profile.suspended_at %>
-</p>
-
-<p>
-  <strong>Suspension status:</strong>
-  <%= @profile.suspension_status %>
-</p>
+<div>
+<% unless @profile.image_url == nil || "" %>
+    "<%= profile.image_url %></p>
+  <% end %>
+</div>
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path %>
