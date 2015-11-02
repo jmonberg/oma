@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150713193808) do
+ActiveRecord::Schema.define(version: 20151102170856) do
 
   create_table "categories", force: true do |t|
     t.string   "category_description"
@@ -61,6 +61,12 @@ ActiveRecord::Schema.define(version: 20150713193808) do
     t.text     "display_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "encrypted_password", limit: 128
+    t.string   "confirmation_token", limit: 128
+    t.string   "remember_token",     limit: 128
   end
+
+  add_index "users", ["email"], name: "index_users_on_email"
+  add_index "users", ["remember_token"], name: "index_users_on_remember_token"
 
 end
