@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151102170856) do
+ActiveRecord::Schema.define(version: 20151217190938) do
 
   create_table "categories", force: true do |t|
     t.string   "category_description"
@@ -53,6 +53,14 @@ ActiveRecord::Schema.define(version: 20151102170856) do
   end
 
   add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"
+
+  create_table "projects", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "website"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.text     "logon"
